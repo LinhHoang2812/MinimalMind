@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/08cbb4f779.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Minimal Mind</title>
+  </head>
+  <body>
+    <div class="shipping">Freeship for all orders over 30$</div>
+    <nav>
+      <div class="nav-logo">
+        <img src="image/minimal_logo.png" alt="" />
+        <div class="cart-logo">
+          <i class="fa-regular fa-cart-shopping"
+            ><sup class="cart-number">0</sup></i
+          >
+          <aside class="cart-aside">
+            <button class="close-btn">
+              <i class="fa-regular fa-circle-xmark"></i>
+            </button>
+            <div class="cart-title"><h5>Your item</h5></div>
+            <div class="cart-center">
+              <div class="shopping-container">
+                <div class="shopping-list">
+                  <h6 class="empty-cart">Your cart is empty</h6>
+                </div>
+              </div>
+            </div>
+            <div class="cart-footer">
+              <div class="total">
+                <h6>Total:</h6>
+                <h6 class="bill">0$</h6>
+              </div>
+              <div class="ship">
+                <h6>Shipping:</h6>
+                <h6 class="ship-fee">0$</h6>
+              </div>
+              <div class="cart-btn-container">
+                <button type="button" class="viewcart-btn">View cart</button>
+                <button type="button" class="checkout-btn">Check out</button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <div class="nav-links">
+        <ul class="links">
+          <li><a href="#">Home</a></li>
+          <li class="dropdown dropdown-category">
+            <a href="product.html?cate=all">Clothing</a>
+            <div class="dropdown-content">
+              <a href="product.html?cate=dress">Dress</a>
+              <a href="product.html?cate=top">Top</a>
+              <a href="product.html?cate=skirt">Skirt</a>
+              <a href="product.html?cate=bottom">Bottoms</a>
+            </div>
+          </li>
+          <li class="dropdown dropdown-collection">
+            <a href="">Collection</a>
+            <div class="dropdown-content">
+              <a href="product.html?cate=all&collection=spring">Spring</a>
+              <a href="product.html?cate=all&collection=office">Office</a>
+              <a href="product.html?cate=all&collection=urban">Urban</a>
+              <a href="product.html?cate=all&collection=summer">Summer</a>
+            </div>
+          </li>
+          <li><a href="#blog-section">Blog</a></li>
+          <li><a href="#footer-section">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section id="intro-section">
+      <div class="slider-container">
+        <div class="slide">
+          <img src="image/intro-1.png" alt="" class="img-slide" />
+        </div>
+        <div class="slide">
+          <img src="image/intro-2.png" alt="" class="img-slide" />
+        </div>
+        <div class="slide">
+          <img src="image/intro-3.png" alt="" class="img-slide" />
+        </div>
+        <div class="slide">
+          <img src="image/intro-4.png" alt="" class="img-slide" />
+        </div>
+        <button class="btn-slide next">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <button class="btn-slide prev">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="btn-shop">Shop now</button>
+      </div>
+    </section>
+
+    <section id="sale-section">
+      <div class="sale-info">
+        <h3><span>Spring sale</span></h3>
+        <article class="deadline-info">
+          <h4 class="sale">Our sales ends on sunday, 30 April 2023 23:00</h4>
+          <div class="deadline">
+            <!-- days -->
+            <div class="deadline-format">
+              <div>
+                <h4 class="days">34</h4>
+                <span>days</span>
+              </div>
+            </div>
+            <!-- end of item -->
+
+            <!-- hours -->
+            <div class="deadline-format">
+              <div>
+                <h4 class="hours">34</h4>
+                <span>hours</span>
+              </div>
+            </div>
+            <!-- end of item -->
+
+            <!-- mins -->
+            <div class="deadline-format">
+              <div>
+                <h4 class="mins">34</h4>
+                <span>mins</span>
+              </div>
+            </div>
+            <!-- end of item -->
+
+            <!-- secs -->
+            <div class="deadline-format">
+              <div>
+                <h4 class="secs">34</h4>
+                <span>secs</span>
+              </div>
+            </div>
+            <!-- end of item -->
+          </div>
+        </article>
+      </div>
+      <div class="sale-container">
+        <div class="sale-slide"></div>
+
+        <div class="sale-slide"></div>
+        <button class="btn-slide next-sale">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <button class="btn-slide prev-sale">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+      </div>
+    </section>
+    <section id="collection-section">
+      <h3><span>Featured Collection</span></h3>
+      <div class="collection-container">
+        <div class="wrapper">
+          <div class="collection spring">Spring</div>
+        </div>
+        <div class="wrapper"><div class="collection office">Office</div></div>
+        <div class="wrapper"><div class="collection urban">Urban</div></div>
+        <div class="wrapper"><div class="collection summer">Summer</div></div>
+      </div>
+    </section>
+
+    <section id="blog-section">
+      <h3><span>Our articles</span></h3>
+      <div class="blog-container">
+        <!-- start of blog -->
+        <div class="blog">
+          <div class="blog-img">
+            <img src="image/blog-1.png" alt="" />
+          </div>
+          <div class="blog-title">How to dress minimal and stylist?</div>
+          <div class="blog-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+              exercitationem ullam odio ipsa quo non, distinctio tempora
+              perspiciatis, assumenda beatae recusandae dolorem architecto,
+              accusamus ea. Lorem ipsum dolor sit amet consectetur, adipisicing
+              elit. Corrupti, nostrum.
+            </p>
+          </div>
+          <small>26/04/2023</small>
+        </div>
+        <!-- end of blog -->
+
+        <!-- start of blog -->
+        <div class="blog">
+          <div class="blog-img">
+            <img src="image/blog-2.png" alt="" />
+          </div>
+          <div class="blog-title">Build your own minimal wardrobe</div>
+          <div class="blog-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+              exercitationem ullam odio ipsa quo non, distinctio tempora
+              perspiciatis, assumenda beatae recusandae dolorem architecto,
+              accusamus ea.
+            </p>
+          </div>
+          <small>26/04/2023</small>
+        </div>
+        <!-- end of blog -->
+
+        <!-- start of blog -->
+        <div class="blog">
+          <div class="blog-img">
+            <img src="image/blog-3.png" alt="" />
+          </div>
+          <div class="blog-title">Our journey to sustainability</div>
+          <div class="blog-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+              exercitationem ullam odio ipsa quo non, distinctio tempora
+              perspiciatis, assumenda beatae recusandae dolorem architecto,
+              accusamus ea.
+            </p>
+          </div>
+          <small>26/04/2023</small>
+        </div>
+        <!-- end of blog -->
+      </div>
+    </section>
+
+    <footer id="footer-section">
+      <div class="footer-container">
+        <div class="footer-content">
+          <h4>Categories</h4>
+          <ul class="footer-list">
+            <li><a href="product.html?cate=dress">Dress</a></li>
+            <li><a href="product.html?cate=top">Top</a></li>
+            <li><a href="product.html?cate=skirt">Skirt</a></li>
+            <li><a href="product.html?cate=bottom">Bottom</a></li>
+          </ul>
+        </div>
+        <div class="footer-content">
+          <h4>Information</h4>
+          <ul class="footer-list">
+            <li><a href="">About us</a></li>
+            <li><a href="">Contact us</a></li>
+            <li><a href="">Shipping information</a></li>
+            <li><a href="">Terms and conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-content">
+          <h4>Contact</h4>
+          <div class="brand-icon-list">
+            <i class="fa-brands fa-instagram brand-icon"></i>
+            <i class="fa-brands fa-facebook brand-icon"></i>
+            <i class="fa-brands fa-tiktok brand-icon"></i>
+          </div>
+        </div>
+        <div class="footer-content">
+          <h4>Minimal Mind</h4>
+          <p>
+            Via Bagni di Mario, Bologna, Italy<br /><br />
+            Tel: 123456789<br /><br />
+            Email: info@minimalmind.com
+          </p>
+        </div>
+      </div>
+      <div class="copyright">
+        <small>© 2023 by Linh Hoang</small>
+      </div>
+    </footer>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>
