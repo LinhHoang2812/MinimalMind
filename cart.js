@@ -8,9 +8,7 @@ const navLogo = document.querySelector(".nav-logo");
 const body = document.querySelector("body");
 const aside = document.querySelector(".cart-aside");
 
-window.addEventListener("DOMContentLoaded", function () {
-  displayLocalStorage();
-});
+window.addEventListener("DOMContentLoaded", displayLocalStorage);
 cart.addEventListener("click", function () {
   cart.classList.add("show-aside");
   navLogo.classList.add("dark-layer");
@@ -40,7 +38,9 @@ function addToCart() {
     btn.addEventListener("click", function (e) {
       var chosenProduct = e.currentTarget.parentElement;
       var product = products.find(function (product) {
-        if (product.name == chosenProduct.querySelector("h5").textContent) {
+        if (
+          product.name == chosenProduct.querySelector(".item-name").textContent
+        ) {
           return product;
         }
       });
@@ -54,7 +54,7 @@ function addToCart() {
       item.setAttributeNode(attribute);
       item.innerHTML = `
                     <div class="item-img">
-                      <img src=${product.url} alt="" />
+                      <img src=${product.url[0]} alt="" />
                     </div>
                     <div class="item-info">
                       <h6 class="title">${product.name}</h6>
@@ -269,7 +269,7 @@ function addItem(id, url, name, singleprice, price, count) {
   item.setAttributeNode(attribute);
   item.innerHTML = `
                     <div class="item-img">
-                      <img src=${url} alt="" />
+                      <img src=${url[0]} alt="" />
                     </div>
                     <div class="item-info">
                       <h6 class="title">${name}</h6>

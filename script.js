@@ -138,9 +138,9 @@ function displaySale() {
   });
   var saleItems = saleProducts.map(function (product) {
     return `<div class="img-container">
-            <img src=${product.url} alt="" class="img-sale" />
+            <img src=${product.url[0]} alt="" class="img-sale" />
             <span>-${product.percent}%</span>
-            <h5>${product.name}</h5>
+            <h5 class="item-name"><a href="single-product.html?id=${product.id}">${product.name}</a></h5>
             <p>price: ${product.price}$</p>
             <button type="button" class="btn-cart">add to cart</button>
           </div>`;
@@ -187,12 +187,58 @@ function saleSlider() {
   }
 }
 
-const collections = document.querySelectorAll(
-  ".collection-container .collection"
-);
+// const collections = document.querySelectorAll(
+//   ".collection-container .collection"
+// );
 
-collections.forEach(function (collection) {
-  collection.addEventListener("click", function () {
-    window.location.href = `product.html?cate=all&collection=${collection.textContent.toLowerCase()}`;
-  });
-});
+// collections.forEach(function (collection) {
+//   collection.addEventListener("click", function () {
+//     window.location.href = `product.html?cate=all&collection=${collection.textContent.toLowerCase()}`;
+//   });
+// });
+
+// open video when click on each collection
+
+function getElement(selection) {
+  const element = document.querySelector(selection);
+  if (element) {
+    return element;
+  }
+  throw new Error(
+    `please check again ${element} selector, no such element exists`
+  );
+}
+
+class Collection {
+  constructor(element) {
+    this.collection = element;
+    this.source = element.dataset.video;
+    this.modal = document.querySelector(".modal");
+    this.modalCloseBtn = document.querySelector(".modal-close-btn");
+    this.video = document.querySelector("iframe");
+    //bind
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+
+    //event
+    this.collection.addEventListener("click", this.openModal);
+  }
+  openModal = function () {
+    this.displayVideo();
+    this.modal.classList.add("open");
+    this.modalCloseBtn.addEventListener("click", this.closeModal);
+  };
+  closeModal = function () {
+    this.modal.classList.remove("open");
+    this.video.src = "";
+    this.modalCloseBtn.removeEventListener("click", this.closeModal);
+  };
+  displayVideo = function () {
+    this.video.src = this.source;
+  };
+}
+
+const spring = new Collection(getElement(".spring"));
+const office = new Collection(getElement(".office"));
+const urban = new Collection(getElement(".urban"));
+const summer = new Collection(getElement(".summer"));

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/08cbb4f779.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Minimal Mind</title>
+  </head>
+  <body>
+    <div class="shipping">Freeship for all orders over 30$</div>
+    <nav>
+      <div class="nav-logo">
+        <img src="image/minimal_logo.png" alt="" />
+        <div class="cart-logo">
+          <i class="fa-regular fa-cart-shopping"
+            ><sup class="cart-number">0</sup></i
+          >
+          <aside class="cart-aside">
+            <button class="close-btn">
+              <i class="fa-regular fa-circle-xmark"></i>
+            </button>
+            <div class="cart-title"><h5>Your item</h5></div>
+            <div class="cart-center">
+              <div class="shopping-container">
+                <div class="shopping-list">
+                  <h6 class="empty-cart">Your cart is empty</h6>
+                </div>
+              </div>
+            </div>
+            <div class="cart-footer">
+              <div class="total">
+                <h6>Total:</h6>
+                <h6 class="bill">0$</h6>
+              </div>
+              <div class="ship">
+                <h6>Shipping:</h6>
+                <h6 class="ship-fee">0$</h6>
+              </div>
+              <div class="cart-btn-container">
+                <button type="button" class="viewcart-btn">View cart</button>
+                <button type="button" class="checkout-btn">Check out</button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <div class="nav-links">
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown dropdown-category">
+            <a href="product.html?cate=all">Clothing</a>
+            <div class="dropdown-content">
+              <a href="product.html?cate=dress">Dress</a>
+              <a href="product.html?cate=top">Top</a>
+              <a href="product.html?cate=skirt">Skirt</a>
+              <a href="product.html?cate=bottom">Bottoms</a>
+            </div>
+          </li>
+          <li class="dropdown dropdown-collection">
+            <a href="">Collection</a>
+            <div class="dropdown-content">
+              <a href="product.html?cate=all&collection=spring">Spring</a>
+              <a href="product.html?cate=all&collection=office">Office</a>
+              <a href="product.html?cate=all&collection=urban">Urban</a>
+              <a href="product.html?cate=all&collection=summer">Summer</a>
+            </div>
+          </li>
+          <li><a href="#blog-section">Blog</a></li>
+          <li><a href="#footer-section">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section id="detail-section">
+      <div class="detail-container">
+        <div class="main-img-container">
+          <div class="main-img">
+            <img src="" />
+          </div>
+          <div class="other-img"></div>
+        </div>
+        <div class="detail-text">
+          <div class="detail-content"></div>
+
+          <hr class="line" />
+          <div class="about-store">
+            <h4>About Minimal Mind</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              dolorem earum cumque voluptas officia veniam debitis perspiciatis
+              nobis consequuntur recusandae sequi sint, odio ipsam omnis, modi,
+              quo odit vitae in. Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit.<br />
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio
+              quidem facere, qui tempora expedita fuga ducimus odio nulla quae
+              aperiam nam dolor ratione iste voluptatem debitis accusamus
+              doloremque ut voluptatum omnis esse rerum placeat amet animi
+              provident. Quos, pariatur repellat?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="tab-section">
+      <div class="tab-btn-container">
+        <button class="tab-btn active" data-id="description">
+          Description
+        </button>
+        <button class="tab-btn" data-id="reviews">Customer Reviews</button>
+        <button class="tab-btn" data-id="return-shipping">
+          Return & Shipping
+        </button>
+      </div>
+      <div class="tab-content-container">
+        <div class="tab-content active" id="description">
+          <h4>Product Description</h4>
+          <p></p>
+        </div>
+        <div class="tab-content" id="reviews">
+          <h4>Customer Reviews</h4>
+          <p>Be the first one to write review about the product!</p>
+        </div>
+        <div class="tab-content" id="return-shipping">
+          <h4>Return and Shipping Policy</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+            inventore eveniet vitae earum placeat reprehenderit quae a dicta
+            officia tenetur ea accusamus, laudantium atque sunt ratione
+            repellendus tempora. Unde, sunt.
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="copyright">
+      <small>© 2023 by Linh Hoang</small>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="single-product.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>

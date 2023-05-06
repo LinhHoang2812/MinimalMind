@@ -176,16 +176,16 @@ function displayProduct(product_array) {
   var all_products = product_array.map(function (product) {
     if (product.sale) {
       return `<div class="img-container">
-            <img src=${product.url} alt="" class="img-sale" />
+            <img src=${product.url[0]} alt="" class="img-sale" />
             <span>-${product.percent}%</span>
-            <h5>${product.name}</h5>
+            <h5 class="item-name"><a href="single-product.html?id=${product.id}">${product.name}</a></h5>
             <p>price: ${product.price}$</p>
             <button type="button" class="btn-cart">add to cart</button>
           </div>`;
     } else {
       return `<div class="img-container">
-            <img src=${product.url} alt="" class="img-sale" />
-            <h5>${product.name}</h5>
+            <img src=${product.url[0]} alt="" class="img-sale" />
+            <h5 class="item-name"><a href="single-product.html?id=${product.id}">${product.name}</a></h5>
             <p>price: ${product.price}$</p>
             <button type="button" class="btn-cart">add to cart</button>
           </div>`;
